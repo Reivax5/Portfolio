@@ -1,33 +1,40 @@
 <template>
 <div>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.x/css/font-awesome.min.css" rel="stylesheet">
+  <title>Home Page</title>
 </head>
   <body>
-    <ul>
-  <li>
-    <a href="https://www.linkedin.com/in/aymeric-fisselier/">
-      <i class="fa fa-linkedin"></i>
-      <span> Linkedin</span>
-    </a>
-  </li>
-  <li>
-    <a href="https://github.com/Reivax5">
-      <i class="fa fa-github" aria-hidden="true"></i>
-      <span> Github</span>
-    </a>
-  </li>
-  <li>
-    <a href="https://www.instagram.com/aymbcn/">
-      <i class="fa fa-instagram" aria-hidden="true"></i>
-      <span> Instagram</span>
-    </a>
-  </li>   
-  </ul>
+  <div id="header" style="margin-top: 5%; margin-bottom: 5%">
+    <div id="title">
+      <h1 style="font-size: 80%">Aymeric Fisselier</h1>
+      <h2 style="font-size: 60%">Student at Epitech</h2>
+    </div>
+    <div id="contact">
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/aymeric-fisselier/">
+            <i class="fa fa-linkedin"></i>
+            <span> Linkedin</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Reivax5">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <span> Github</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/aymbcn/">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <span> Instagram</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
     <v-row>
-      <v-col cols="12">
-        <h1 id="title">My Projects</h1>
-      </v-col>
     <v-col cols="12">
     <div class="container">
       <div v-tilt="{scale: 1.2}" class="card">
@@ -58,7 +65,7 @@
     </v-col>
     </v-row>
     <div class="blob">
-      <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
         <path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z"/>
       </svg>
     </div>
@@ -97,25 +104,25 @@ scale: 1, // 2 = 200%, 1.5 = 150%, etc..
 body
 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   background-color: #C2DED1;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  position: relative;
 }
 
 ul {
-  position:absolute;
-  top:7%;
-  left:87%;
-  transform:translate(-50%, -50%);
-  display:flex;
-  margin:0;
+  position: relative;
+  transform: translate(-50%, -50%);
+  display: flex;
+  margin: 0;
   z-index: 3;
-  padding:0;
+  padding: 0;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
 }
 
 ul li {
@@ -147,7 +154,6 @@ ul li a span {
 
 ul li a {
   text-decoration: none;
-  display: absolute;
   display: block;
   width:90px;
   height:20px;
